@@ -1,0 +1,21 @@
+version: "3"
+services:
+  miratonrose:
+    build:
+      context: "."
+    ports:
+      - "80:80"
+    restart: "on-failure"
+    environment:
+      - ADMIN_DASHBOARD_LINK
+      - MONGODB_URI
+      - SENDGRID_API_KEY
+      - JWT_SECRET
+      - OPAY_AUTHORIZATION
+      - OPAY_AUTHORIZATION_PRIVATE
+      - OPAY_CALLBACK_URL
+      - OPAY_MERCHANT_ID
+      - PAYSTACK_AUTHORIZATION
+      - PAYSTACK_CALLBACK_URL
+      - RESIDENT_APP_DOWNLOAD_LINK
+      - WEB_APP_URL

@@ -2,7 +2,8 @@ import express from "express";
 
 const PORT = process.env.PORT || 5000;
 const server = express();
-const onServerStartup = () => `Server is running on http://localhost:${PORT}`;
+const onServerStartup = () =>
+  console.info(`Server is running on http://localhost:${PORT}`);
 
 // middlewares
 
