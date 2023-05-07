@@ -1,0 +1,26 @@
+{
+  "name": "miratonapi-rose",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prebuild": "rimraf dist tsconfig.tsbuildinfo",
+    "postbuild": "cp -r ./src/templates ./dist/templates",
+    "build": "tsc --skipLibCheck",
+    "start": "node ./dist/www.js",
+    "dev:start": "ts-node-dev --clear --watch src/**.ts src/www.ts",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
+  },
+  "engines": {
+    "node": "14.17.6"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "rimraf": "^4.4.0",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "prettier": "^2.8.4",
+    "ts-node-dev": "^2.0.0"
+  }
+}
